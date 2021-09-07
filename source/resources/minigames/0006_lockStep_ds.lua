@@ -4,8 +4,8 @@
       canv = love.graphics.newCanvas(view.width,view.height)
     }
     snd = {
-      on = love.audio.newSource("/resources/sfx/Lock step/stepOn.ogg"),
-      off = love.audio.newSource("/resources/sfx/Lock step/stepOff.ogg")
+      on = love.audio.newSource("/resources/sfx/Lock step/stepOn.ogg", "static"),
+      off = love.audio.newSource("/resources/sfx/Lock step/stepOff.ogg", "static")
     }
     if data.options.lockStep.paletteSwap == "yes" then
       shaders = {

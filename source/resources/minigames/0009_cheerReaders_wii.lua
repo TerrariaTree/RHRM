@@ -100,7 +100,7 @@ local function lminigame()
     }
   }
   snd = {
-    bearly = love.audio.newSource("/resources/sfx/game/bearlyHit.ogg")
+    bearly = love.audio.newSource("/resources/sfx/game/bearlyHit.ogg", "static")
   }
   anim = {
     mouth = newAnimationGroup(img.sheet)

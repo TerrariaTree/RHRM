@@ -18,13 +18,13 @@ function loadEditor()
       musicStart = "f85060"
     },
     snd = {
-      metronome = love.audio.newSource("/resources/sfx/metronome.ogg"),
+      metronome = love.audio.newSource("/resources/sfx/metronome.ogg", "stream"),
     },
     block = {
       name = "potu hittu",
       length = 128,
-      cues = {{name = "potu thru",x = 0,sound = love.audio.newSource("/resources/sfx/karate man (GBA)/potThrow.ogg")}},
-      hits = {{name = "panchu",x = 64,sound = love.audio.newSource("/resources/sfx/karate man (GBA)/potHit.ogg"),input = "pressA"}}
+      cues = {{name = "potu thru",x = 0,sound = love.audio.newSource("/resources/sfx/karate man (GBA)/potThrow.ogg", "static")}},
+      hits = {{name = "panchu",x = 64,sound = love.audio.newSource("/resources/sfx/karate man (GBA)/potHit.ogg", "static"), input = "pressA"}}
     },
     buttonSpace = 48,
     gridspace = 256,
@@ -446,9 +446,9 @@ function loadEditor()
   local b = createButton(48*12,0,f,love.graphics.newImage("/resources/gfx/editor/buttons/clear.png"),editor.scheme.block,true,"clear remix")
   b.count = 4
   b.sfx = {
-    [1] = love.audio.newSource("/resources/sfx/editor/ONEh.ogg"),
-    [2] = love.audio.newSource("/resources/sfx/editor/TWOh.ogg"),
-    [3] = love.audio.newSource("/resources/sfx/editor/THREEh.ogg"),
+    [1] = love.audio.newSource("/resources/sfx/editor/ONEh.ogg", "static"),
+    [2] = love.audio.newSource("/resources/sfx/editor/TWOh.ogg", "static"),
+    [3] = love.audio.newSource("/resources/sfx/editor/THREEh.ogg", "static"),
   }
   
   --[[local function f(i)

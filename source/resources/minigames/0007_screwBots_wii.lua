@@ -80,10 +80,10 @@ local function lminigame()
   anim.conveyerBelt:addFrame("normal",0,80,576,80,100)
   
   snd = {
-    oh = love.audio.newSource("/resources/sfx/screw bots/oh.ogg"),
-    yea = love.audio.newSource("/resources/sfx/screw bots/yea.ogg"),
-    lets = love.audio.newSource("/resources/sfx/screw bots/lets.ogg"),
-    go = love.audio.newSource("/resources/sfx/screw bots/go.ogg") 
+    oh = love.audio.newSource("/resources/sfx/screw bots/oh.ogg", "static"),
+    yea = love.audio.newSource("/resources/sfx/screw bots/yea.ogg", "static"),
+    lets = love.audio.newSource("/resources/sfx/screw bots/lets.ogg", "static"),
+    go = love.audio.newSource("/resources/sfx/screw bots/go.ogg", "static") 
   }
   
   crane = {

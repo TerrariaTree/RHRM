@@ -27,9 +27,9 @@ function lminigame()
   anim.player:addAnimation("idle",0,160,64,128,4,0)
   
   snd = {
-    peck = love.audio.newSource("/resources/sfx/Blue birds/peckPlayer.ogg"),
-    peck2 = love.audio.newSource("/resources/sfx/Blue birds/stretchPlayer1.ogg"),
-    stretch = love.audio.newSource("/resources/sfx/Blue birds/stretchPlayer2.ogg")
+    peck = love.audio.newSource("/resources/sfx/Blue birds/peckPlayer.ogg", "static"),
+    peck2 = love.audio.newSource("/resources/sfx/Blue birds/stretchPlayer1.ogg", "static"),
+    stretch = love.audio.newSource("/resources/sfx/Blue birds/stretchPlayer2.ogg", "static")
   }
   snd.peck:setVolume(0.5)
   snd.peck2:setVolume(0.5)

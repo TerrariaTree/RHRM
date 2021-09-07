@@ -17,7 +17,7 @@ function loadGameInputs(seekTime)
       alive = love.graphics.newQuad(0,0,32,32,96,32),
       dead = love.graphics.newQuad(32,0,32,32,96,32),
       worried = love.graphics.newQuad(64,0,32,32,96,32),
-      fail = love.audio.newSource("/resources/sfx/game/endlessFail.ogg"),
+      fail = love.audio.newSource("/resources/sfx/game/endlessFail.ogg", "static"),
     }
   end
   
@@ -52,16 +52,16 @@ function loadGameInputs(seekTime)
   ratingTimer = 0
   ratingPhase = 0
   gameSnd = {
-    potHit = love.audio.newSource("/resources/sfx/karate man (GBA)/potHit.ogg"),
-    header = love.audio.newSource("/resources/sfx/game/header.ogg"),
-    text = love.audio.newSource("/resources/sfx/game/text.ogg"),
+    potHit = love.audio.newSource("/resources/sfx/karate man (GBA)/potHit.ogg", "static"),
+    header = love.audio.newSource("/resources/sfx/game/header.ogg", "static"),
+    text = love.audio.newSource("/resources/sfx/game/text.ogg", "static"),
     music = {
-      ["perfect"] = love.audio.newSource("/resources/sfx/game/perfect.ogg"),
-      ["superb"] = love.audio.newSource("/resources/sfx/game/superb.ogg"),
-      ["ok"] = love.audio.newSource("/resources/sfx/game/ok.ogg"),
-      ["tryAgain"] = love.audio.newSource("/resources/sfx/game/tryAgain.ogg"),
+      ["perfect"] = love.audio.newSource("/resources/sfx/game/perfect.ogg", "static"),
+      ["superb"] = love.audio.newSource("/resources/sfx/game/superb.ogg", "static"),
+      ["ok"] = love.audio.newSource("/resources/sfx/game/ok.ogg", "static"),
+      ["tryAgain"] = love.audio.newSource("/resources/sfx/game/tryAgain.ogg", "static"),
     },
-    bearlyHit = love.audio.newSource("/resources/sfx/game/bearlyHit.ogg"),
+    bearlyHit = love.audio.newSource("/resources/sfx/game/bearlyHit.ogg", "static"),
   }
   gameSnd.potHit:setVolume(3)
   
@@ -78,7 +78,7 @@ function loadGameInputs(seekTime)
   }
   
   imgPerfect = love.graphics.newImage("/resources/gfx/perfect.png")
-  sndPerfectFail = love.audio.newSource("/resources/sfx/karate man (GBA)/potBreak.ogg")
+  sndPerfectFail = love.audio.newSource("/resources/sfx/karate man (GBA)/potBreak.ogg", "static")
   
   if data.musicStart <= data.beat then
     data.music:play()
@@ -517,7 +517,7 @@ function updateGameInputs(dt)
       elseif randomized then
         if intro then
           data.music:stop()
-          data.music = love.audio.newSource("/resources/sfx/randomizedRemix/endlessRemixLoop.ogg")
+          data.music = love.audio.newSource("/resources/sfx/randomizedRemix/endlessRemixLoop.ogg", "stream")
           data.music:seek(0)
           intro = false
         end

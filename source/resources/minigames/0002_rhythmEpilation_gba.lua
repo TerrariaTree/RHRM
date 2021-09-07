@@ -34,7 +34,7 @@ local function lminigame()
   anim.roots:addAnimation("appear",32,0,16,32,4,100)
   
   snd = {
-    pluckLong = love.audio.newSource("/resources/sfx/rhythm tweezers (GBA)/hairPluckLong2.ogg")
+    pluckLong = love.audio.newSource("/resources/sfx/rhythm tweezers (GBA)/hairPluckLong2.ogg", "static")
   }
   
   onion = {

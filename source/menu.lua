@@ -3,8 +3,8 @@ function loadMenu()
   menu = {
     loadPhase = 0,
     remixIntro = {
-      [1] = love.audio.newSource("/resources/sfx/game/remixIntroTengoku.ogg"),
-      [3] = love.audio.newSource("/resources/sfx/game/remixIntroFever.ogg"),
+      [1] = love.audio.newSource("/resources/sfx/game/remixIntroTengoku.ogg", "stream"),
+      [3] = love.audio.newSource("/resources/sfx/game/remixIntroFever.ogg", "stream"),
     },
     introImg = {
       [1] = {
@@ -25,7 +25,7 @@ function loadMenu()
     },
     buttons = {},
     stars = {},
-    music = love.audio.newSource("/resources/music/space dance (GBA).ogg"),
+    music = love.audio.newSource("/resources/music/space dance (GBA).ogg", "stream"),
     bpm = 120,
     beat = 0,
     beatCount = 0,
@@ -33,9 +33,9 @@ function loadMenu()
     bounce = 0,
     bounceOld = 0,
     snd = {
-      buttonOn = love.audio.newSource("/resources/sfx/menu/buttonOn.ogg"),
-      buttonOff = love.audio.newSource("/resources/sfx/menu/buttonOff.ogg"),
-      buttonPress = love.audio.newSource("/resources/sfx/menu/buttonPress.ogg")
+      buttonOn = love.audio.newSource("/resources/sfx/menu/buttonOn.ogg", "static"),
+      buttonOff = love.audio.newSource("/resources/sfx/menu/buttonOff.ogg", "static"),
+      buttonPress = love.audio.newSource("/resources/sfx/menu/buttonPress.ogg", "static")
     }
   }
   menu.quad = {

@@ -174,8 +174,8 @@ function love.load()
           name = "hair appear pluck",
           length = 64,
           hideConnection = true,
-          cues = {{name = "appear",x = 0,sound = newSource("/resources/sfx/rhythm tweezers (GBA)/hairAppear.ogg")}},
-          hits = {{name = "pluck",x = 64*4,sound = newSource("/resources/sfx/rhythm tweezers (GBA)/hairPluck.ogg"),input = "pressANY"}}
+          cues = {{name = "appear",x = 0,sound = newSource("/resources/sfx/rhythm tweezers (GBA)/hairAppear.ogg"1)}},
+          hits = {{name = "pluck",x = 64*4,sound = newSource("/resources/sfx/rhythm tweezers (GBA)/hairPluck.ogg"1),input = "pressANY"}}
         },]]
         {
           name = "hair appear",
@@ -1176,7 +1176,7 @@ function initializeData()
     beat = 0,
     beatCount = 0,
     musicStart = 2.75,
-    music = newSource("/resources/music/practice.ogg"),
+    music = newSource("/resources/music/practice.ogg", "stream"),
     blocks = {},
     tempoChanges = {},
     version = version,
@@ -1310,7 +1310,7 @@ function editorLoadMusic(file)
     local nFilename = "temp/music"..string.lower(string.sub(filename,filename:len()-3))
     love.filesystem.write(nFilename,d)
     local file = love.filesystem.newFile(nFilename)
-    data.music = love.audio.newSource(file)
+    data.music = love.audio.newSource(file, "stream")
     data.music:setVolume(0.25)
     print("MUSIC LOADED !")
   end
@@ -1562,7 +1562,7 @@ end
 sourceFilenames = {}
 --source
 function newSource(filename)
-  local s = love.audio.newSource(filename)
+  local s = love.audio.newSource(filename, "stream")
   --print(s)
   sourceFilenames[tostring(s)] = filename
   --print(sourceFilenames[tostring(s)])

@@ -20,9 +20,9 @@ function lminigame()
     flow = newAnimationGroup(newImageAssetFlipped("/karate man (GBA)/flow.png")),
   }
   snd = {
-    ohYeah = love.audio.newSource("/resources/sfx/karate man (GBA)/ohYeah.ogg"),
-    potHitFlow = love.audio.newSource("/resources/sfx/karate man (GBA)/potHitHighFlow.ogg"),
-    potBreak = love.audio.newSource("/resources/sfx/karate man (GBA)/potBreak.ogg"),
+    ohYeah = love.audio.newSource("/resources/sfx/karate man (GBA)/ohYeah.ogg", "static"),
+    potHitFlow = love.audio.newSource("/resources/sfx/karate man (GBA)/potHitHighFlow.ogg", "static"),
+    potBreak = love.audio.newSource("/resources/sfx/karate man (GBA)/potBreak.ogg", "static"),
   }
   anim.flow:addAnimation("anim",0,0,16,128,6,0)
   anim.head:addAnimation("happy",96,0,32,40,1,100)

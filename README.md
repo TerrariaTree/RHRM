@@ -1,7 +1,4 @@
 # RHRM2
-a mod of RHRM
-
+Modification for Rhythm Heaven Remix Maker
 # HOW TO BUILD
-download Love2D framework, download the "source" folder, once you got LOVE2D, drop the "resource" folder in the LOVE2D.exe file or something (not the installer).
-have fun!
-
+Download LÖVE2D framework, clone the repo somewhere, and drop the "source" folder onto LÖVE executable "love.exe"

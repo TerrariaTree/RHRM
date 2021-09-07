@@ -23,11 +23,11 @@ local function lminigame()
     }
   }
   snd = {
-    dooStart = love.audio.newSource("/resources/sfx/moai doo woop/dooRStart.ogg"),
-    doo = love.audio.newSource("/resources/sfx/moai doo woop/dooR.ogg"),
-    woop = love.audio.newSource("/resources/sfx/moai doo woop/woopR.ogg"),
-    pah = love.audio.newSource("/resources/sfx/moai doo woop/pahR.ogg"),
-    fail = love.audio.newSource("/resources/sfx/game/bearlyHit.ogg")
+    dooStart = love.audio.newSource("/resources/sfx/moai doo woop/dooRStart.ogg", "static"),
+    doo = love.audio.newSource("/resources/sfx/moai doo woop/dooR.ogg", "static"),
+    woop = love.audio.newSource("/resources/sfx/moai doo woop/woopR.ogg", "static"),
+    pah = love.audio.newSource("/resources/sfx/moai doo woop/pahR.ogg", "static"),
+    fail = love.audio.newSource("/resources/sfx/game/bearlyHit.ogg", "static")
   }
   snd.fail:setVolume(0.25)
   p = {
