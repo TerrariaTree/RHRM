@@ -26,7 +26,7 @@ function love.load()
   end
   
   version = "0.8.0-SNAPSHOT-3"
-  love.window.setTitle("RHRM - "..version)
+  love.window.setTitle("RHRM2 - "..version)
   initializeData()
   initializeCues()
   
@@ -1288,7 +1288,7 @@ function love.filedropped(file)
               print("loaded assets")
             end
           end
-          love.window.setTitle("RHRM - "..version.." - "..filename)
+          love.window.setTitle("RHRM2 - "..version.." - "..filename)
         else
           print("THERE WAS AN ERROR WHILE LOADING:")
           print(message)
@@ -1492,7 +1492,10 @@ end
 
 function setColorHex(hex,alpha)
   local r,g,b = hex2rgb(hex)
-  love.graphics.setColor(r,g,b,alpha or 255)
+  local r = r/255
+  local g = g/255
+  local b = b/255
+  love.graphics.setColor(r,g,b,alpha or 1)
 end
 
 function deepcopy(orig)
